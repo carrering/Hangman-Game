@@ -1,0 +1,150 @@
+body{
+
+    background-color:black;
+    color:white;
+
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+h2{
+    display: block;
+    font-size: 1.25em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+
+#getStartedText{
+    font-size:1em;
+}
+
+.winsText{
+    font-size:1em;
+   }
+
+.guessRemainText{
+    font-size:1em;
+   }
+
+.lettersGuessedText{
+    font-size:1em;
+   }
+            
+#titleBar{
+    width:700px;
+    height:100px;
+    margin: 0 auto;
+}
+#mainGame{
+    margin: 0 auto;
+    width:600px;
+    height:800px;
+}
+
+#leftGame{
+    width:300px;
+    float: left;
+    height:800px;
+}
+
+#rightGame{
+    width:300px;
+    float:right;
+    height:800px;
+    text-align: center;
+}
+
+
+#hangmanStandTop{
+    width:300px;
+    float:left;
+}
+
+#hangmanStandLeft{
+    width:50px;
+    float:left;
+    height:200px;
+}
+
+#hangmanStandDude{
+    width:190px;
+    float:left;
+    background-color: rebeccapurple;
+    height:200px;
+    text-align:center;
+}
+
+
+#hangmanStandBottom{
+    width:300px;
+    float:left;
+}
+
+/* head */
+#strike1{
+    visibility:hidden;
+    width:190px;
+    font-size:2em;
+}
+
+/* left arm */
+#strike3{
+    float:left;
+    width:90px;
+    left:40px;
+    position:relative;
+    font-size:2em;
+}
+
+#strike2a{
+    float:left;
+    width:10px;
+    font-size:2em;
+}
+
+/* right arm */
+#strike4{
+    float:right;
+    width:90px;
+    position: relative;
+    right:40px;
+    font-size:2em;
+}
+
+#strike2b{
+    width:190px;
+    font-size:2em;
+
+}
+
+/* left leg */
+#strike5{
+    width:95px;
+    float:left;
+    left:40px;
+    position:relative;
+    font-size:2em;
+}
+
+/* right leg */
+#strike6{
+    width:95px;
+    float:right;
+    position: relative;
+    right:40px;
+    font-size:2em;
+}

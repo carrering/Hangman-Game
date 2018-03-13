@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hangman Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+ 
+</head>
+<body>
+
+
+
+
+<div id="titleBar">
+                <H1>Hangman Game</H1>
+</div>    
+<div id="mainGame">
+    <div id="leftGame">
+        <div id="hangmanStandTop">
+                @==============||
+        </div>
+        <div id="hangmanStandLeft">
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>      
+                ||<br>
+                ||<br>
+                ||<br>
+                ||<br>
+        </div>
+        <div id="hangmanStandDude">
+            <div id="strike1">O</div>
+            <div id="strike3">\</div>
+            <div id="strike2a">|</div>
+            <div id="strike4">/</div>
+            <div id="strike2b">|</div>
+            <div id="strike5">/</div>
+            <div id="strike6">\</div>
+        </div>
+        <div id="hangmanStandBottom">
+                ==============<br> 
+        </div>
+    </div>
+
+    <div id="rightGame">
+ 
+                
+            <div id="mainMenu">
+                    <h2><div id="getStartedText">Press any key to get started!</div></h2>
+            </div>
+            
+             
+            
+            <div class="winsText">Wins:</div>
+            
+            <div class="guessRemainText">Number of Guesses Remaining: </div>
+            
+            
+           Letters Already Guessed:
+            <p>
+                    <div id="lettersGuessedText"></div>
+            </p>
+            
+    </div>
+
+
+</div>
+
+
+
+<script src="./assets/javascript/game.js"></script>
+
+</body>
+</html>
