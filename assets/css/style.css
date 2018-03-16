@@ -40,10 +40,26 @@ h2{
     font-size:1em;
    }
 
-.lettersGuessedText{
-    font-size:1em;
+#lettersGuessedText{
+    position:relative;
+    height:50px;
+    width:300px;
+    margin: 0 auto;
+ 
+    text-align: center;
+    vertical-align:bottom;
+    top:40px;
+    /* visibility:hidden; */
    }
-            
+
+   #underScores{
+    height:10px;
+    width:300px;
+    margin: 0 auto;
+    text-align: center;
+   }
+
+
 #titleBar{
     width:700px;
     height:100px;
@@ -96,7 +112,6 @@ h2{
 
 /* head */
 #strike1{
-    visibility:hidden;
     width:190px;
     font-size:2em;
 }
@@ -147,4 +162,55 @@ h2{
     position: relative;
     right:40px;
     font-size:2em;
+}
+
+#guessBlock{
+ 
+}
+.underLine{
+    width: 10px;
+    height: 100px;
+ 
+    display:inline-block;
+    font-size:2em;
+    padding:10px;
+    color:white;
+
+}
+
+.guessLetters{
+    width: 10px;
+    height: 10px;
+ 
+    display:inline-block;
+    font-size:2em;
+    padding:10px;
+    color:white;
+    visibility: hidden;
+
+}
+
+
+.visible{
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+#lettersguessedtext{
+
+}
+
+.wrongLetters{
+    width: 10px;
+    height: 10px;
+ 
+    display:inline-block;
+    font-size:2em;
+    padding:10px;
+    color:white;
+    visibility: hidden;
+
 }

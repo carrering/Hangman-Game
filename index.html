@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
- 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
 
@@ -38,22 +39,28 @@
                 ||<br>
         </div>
         <div id="hangmanStandDude">
-            <div id="strike1">O</div>
-            <div id="strike3">\</div>
-            <div id="strike2a">|</div>
-            <div id="strike4">/</div>
-            <div id="strike2b">|</div>
-            <div id="strike5">/</div>
-            <div id="strike6">\</div>
+            <div id="strike1" class="hidden">O</div>
+            <div id="strike3" class="hidden">\</div>
+            <div id="strike2a" class="hidden">|</div>
+            <div id="strike4" class="hidden">/</div>
+            <div id="strike2b" class="hidden">|</div>
+            <div id="strike5" class="hidden">/</div>
+            <div id="strike6" class="hidden">\</div>
         </div>
         <div id="hangmanStandBottom">
                 ==============<br> 
+                <br>
+                <br>
+                <br>
+                Letters Already Guessed:<div id="wrongLetters"></div>
         </div>
+
+
+ 
     </div>
 
+
     <div id="rightGame">
- 
-                
             <div id="mainMenu">
                     <h2><div id="getStartedText">Press any key to get started!</div></h2>
             </div>
@@ -62,12 +69,25 @@
             
             <div class="winsText">Wins:</div>
             
-            <div class="guessRemainText">Number of Guesses Remaining: </div>
-            
-            
-           Letters Already Guessed:
+            <div class="guessRemainText">Number of Guesses Remaining: </div>       
+  
+
+
+
+        
+                        
+                        
+           
             <p>
-                    <div id="lettersGuessedText"></div>
+                    <div id="guessBlock">
+                        <div id="lettersGuessedText">
+                        
+                        </div>
+                        <div id="underScores">
+                    
+                        </div>
+                    </div>
+  
             </p>
             
     </div>
@@ -75,7 +95,8 @@
 
 </div>
 
-
+<!-- <img src="assets/images/captain-planet.jpg" alt="" class="img captain-planet" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px">
+ -->
 
 <script src="./assets/javascript/game.js"></script>
 
