@@ -199,9 +199,6 @@ h2{
     visibility: hidden;
 }
 
-#lettersguessedtext{
-
-}
 
 .wrongLetters{
     width: 10px;
@@ -213,4 +210,14 @@ h2{
     color:white;
     visibility: hidden;
 
+}
+
+#reloadme{
+    float:left;
+    width:100px;
+    height:50px;
+    position:relative;
+    margin: 0 auto;
+    background-color:white;
+    top: -400px;
 }

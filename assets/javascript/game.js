@@ -40,10 +40,10 @@ var game = {
     }
 
 var wordBank = [
-    { letterCount:3, word:'one'},
-    { letterCount:4, word:'java'},
-    { letterCount:5, word:'apple'},
-    { letterCount:6, word:'jungle'},
+    { letterCount:3, word:'car'},
+    { letterCount:4, word:'ford'},
+    { letterCount:5, word:'chevy'},
+    { letterCount:7, word:'mustang'},
     { letterCount:7, word:'porsche'}
 ]
 
@@ -125,36 +125,39 @@ document.onkeyup = function(event){
     for(i=0;i<answerWord.length;i++){
         
 
-        if(answerWord[i] === userGuess && remainingLetters>0 && guessWord[i]!=="@"){
+        if(answerWord[i] === userGuess && remainingLetters>0){
             console.log('answerletter',answerWord[i])
             $('#letter'+i).addClass('visible')
             guessWord[i] = "@"
             remainingLetters--
             console.log('remaining letters',remainingLetters)
             console.log('guessWord', guessWord)
-            correctLetterCounter = 1
+            correctLetterCounter++
             console.log('correct letter counter',correctLetterCounter)
 
         }  
-        else if(answerWord[i] !== userGuess && remainingLetters>0 && guessWord[i]!=="@"){
-            wrongLetterCounter = 1
+        else if(answerWord[i] !== userGuess && remainingLetters>0){
+            wrongLetterCounter++
             console.log('wronglettercounter',wrongLetterCounter)
         }
  
+        if(wrongLetterCounter>0 && wrongLetterCounter === remainingLetters){
 
+            $('#wrongLetters').append(userGuess)
+            guessedWrong++
+            console.log('guessedwrong',guessedWrong)
+            wrongLetterCounter = 0
+            }
+    
  
     }//end for loop
+console.log('wrong counter', wrongLetterCounter)
+console.log('correct letter counter', correctLetterCounter)
 
-    if(wrongLetterCounter===1 && correctLetterCounter===0){
-
-        $('#wrongLetters').append(userGuess)
-        guessedWrong++
-        console.log('guessedwrong',guessedWrong)
-        }
+ 
 
 
-
-if(guessedWrong<=6){
+if(guessedWrong<6){
     switch (guessedWrong) {
         case 1:
             $('#strike1').toggleClass('hidden','visible');
@@ -174,17 +177,14 @@ if(guessedWrong<=6){
             break;
         case 5:
             $('#strike5').toggleClass('hidden','visible');
-            break;
-        case 6:
-            $('#strike6').toggleClass('hidden','visible');
-           
-
     }
 }
 
 else{
+    $('#strike6').toggleClass('hidden','visible');
     console.log("game over")
     userStart.innerHTML = "Sorry You LOST!";
+    $('#reloadme').toggleClass('hidden','visible');
 }
 
 
